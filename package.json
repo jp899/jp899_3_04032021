@@ -1,0 +1,26 @@
+{
+  "name": "jean-paulnavailles_3_04032021",
+  "version": "1.0.0",
+  "description": "Intégration maquette Ohmyfood",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "sass" : "sass --watch ./sass/main.scss:./css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpnavailles/Jean-PaulNavailles_3_04032021.git"
+  },
+  "keywords": [
+    "sass",
+    "animation"
+  ],
+  "author": "JPN",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jpnavailles/Jean-PaulNavailles_3_04032021/issues"
+  },
+  "homepage": "https://github.com/jpnavailles/Jean-PaulNavailles_3_04032021#readme"
+}
