@@ -3,8 +3,39 @@
   font-family: "Roboto", sans-serif;
 }
 
-.sec-presentation h1 {
+.sec-presentation h1, footer h1 {
   font-family: "Shrikhand", cursive;
+}
+
+html {
+  font-size: medium;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  display: none;
+}
+
+footer {
+  color: white;
+  background-color: #353535;
+}
+footer h1, footer ul {
+  width: 85%;
+  margin: auto;
+}
+footer h1 {
+  font-size: 1.2rem;
+}
+footer ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+footer ul li {
+  font-size: 1.2rem;
 }
 
 /*# sourceMappingURL=main.css.map */

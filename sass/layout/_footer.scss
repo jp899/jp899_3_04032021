@@ -1,0 +1,23 @@
+footer{
+    color: $color-footer-font;
+    background-color: $color-footer-bg;
+
+    h1, ul{
+        width:85%;
+        margin:auto;
+    }
+
+    h1{
+        font-size:1.2rem;
+    }
+
+    ul{
+        list-style-type:none;
+        padding-left:0;
+        li{
+            font-size:1.2rem;
+        }
+    }
+
+
+}

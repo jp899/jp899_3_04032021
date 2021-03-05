@@ -5,6 +5,12 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.sec-presentation h1{
+.sec-presentation h1, footer h1{
     font-family: 'Shrikhand', cursive;
 }
+
+// Réglage taille police sur root/html pour utilisation des unités rem
+html{
+    font-size:$base-font-size;
+}
+
