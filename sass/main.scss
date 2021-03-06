@@ -1,11 +1,31 @@
+//------------------------//
+// FICHIER SCSS PRINCIPAL
+//------------------------//
 
 
+//Couleurs, tailles de police générale et autres variables
 @import "./utils/variables.scss";
-@import "./base/fonts.scss";
-@import "./base/body.scss";
+
+
+//Règles générales
+//Règles générales sur les polices 
+@import "./base/typography.scss";
+// Règles générales impactant tout le site
+@import "./base/base.scss";
+
+
+//Règles spécifiques aux composants élémentaires
 // @import "./components/...";
+
+
+//Règles spécifiques aux gros éléments/composants
+@import "./layout/header.scss";
 @import "./layout/footer.scss";
-// @import "./pages/...";
+
+
+//Règles spécifiques aux différentes pages
+// @import "./pages/main.scss";
+// @import "./pages/secondary.scss";
 
 
 

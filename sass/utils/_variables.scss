@@ -1,10 +1,22 @@
+//---------------------------------------------------------//
+// Couleurs, tailles de police générale et autres variables
+//---------------------------------------------------------//
+
+//couleurs générales
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
+
+//couleur du background général
 $color-bg: rgb(246, 246, 246);
+
+//couleur du background (A remplacer par un darken du génbéral,??)
 $color-locate-bg:rgb(234,234,234);
+
+//couleurs du footer
 $color-footer-bg:rgb(53, 53, 53);
 $color-footer-font:white;
 
 
+//Taille de police définie dans le html (servant de base aux unités en rem)
 $base-font-size:medium;
