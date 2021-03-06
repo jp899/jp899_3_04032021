@@ -1,0 +1,19 @@
+//--------------------------------//
+// Règles générales sur les polices
+//--------------------------------//
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+.restaurant-introducer h1, footer h1{
+    font-family: 'Shrikhand', cursive;
+}
+
+// Réglage taille police sur root/html pour utilisation des unités rem
+html{
+    font-size:$base-font-size;
+}
+
