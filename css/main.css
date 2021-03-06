@@ -41,7 +41,7 @@ footer {
   background-color: #353535;
 }
 footer h1, footer ul {
-  width: 85%;
+  width: 86%;
   margin: auto;
 }
 footer h1 {
@@ -53,6 +53,77 @@ footer ul {
 }
 footer ul li {
   font-size: 1.2rem;
+}
+
+.site-introducer {
+  text-align: center;
+  background-color: #f6f6f6;
+}
+.site-introducer__location {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: linear-gradient(to top, #eaeaea, #eaeaea 90%, #cbcbcb);
+}
+.site-introducer h1 {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.site-introducer h1 + p {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.functionning-steps {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.functionning-steps ul {
+  list-style-type: none;
+  padding: 0;
+}
+.functionning-steps ul li {
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+  margin-left: 12px;
+}
+.functionning-steps ul li .number {
+  position: absolute;
+  left: -12px;
+  color: white;
+  background-color: #9356DC;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.functionning-steps ul li .fas {
+  color: #6a6a6a;
+  margin-left: 35px;
+  width: 12%;
+}
+.functionning-steps ul li:nth-child(3) {
+  background-color: #e7d9f7;
+}
+.functionning-steps ul li:nth-child(3) .fas {
+  color: #9356DC;
+}
+
+#restaurants-list {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*# sourceMappingURL=main.css.map */
