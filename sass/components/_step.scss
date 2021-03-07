@@ -1,0 +1,52 @@
+
+
+
+.step{
+ 
+    background-color: $color-bg;
+    display:flex;
+    flex-direction : row;
+    justify-content: left;
+    align-items: center;
+
+    position:relative;
+
+    padding-top:30px;
+    padding-bottom:30px;
+    margin-left:12px;
+
+    border-radius:22px;
+
+    margin-bottom:20px;
+
+    .number{
+        position:absolute;
+        left:-12px;
+        color:white;
+        background-color: $color-primary;
+        border-radius: 50%;
+        width:24px;
+        height:24px;
+        display:flex;
+
+        justify-content: center;
+        align-items: center;
+
+    
+    }
+
+    .fas{
+        color:darken($color-bg,55%);
+        margin-left:35px;
+        width:12%;
+    }
+
+    &--violet{
+        background-color: lighten($color-primary,31%);
+        
+        .fas{
+            color:$color-primary;
+        }
+    }
+
+}

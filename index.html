@@ -33,7 +33,7 @@
 
     <header>
         
-        <img class="header__logo" alt="Logo_ohmyfood" src="images/logo/ohmyfood@2x.svg">
+        <img class="logo" alt="Logo_ohmyfood" src="images/logo/ohmyfood@2x.svg">
         
     </header>
     
@@ -45,7 +45,7 @@
         <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
         
         <nav>
-            <a class="button" href="#main-restaurants">Explorez nos restaurants</a>
+            <a class="button" href="#restaurants-list">Explorez nos restaurants</a>
         </nav>
         
         
@@ -54,61 +54,65 @@
     <section class="functionning-steps">
         <h2>Fonctionnement</h2>
 
-        <ul>
-            <li>
-                <span class="number">1</span> <i class="fas fa-mobile-alt"></i> <span class="text">Choisissez un restaurant</span>
-            </li>
-            <li>
+        <div class="functionning-steps__container">
+            <div class="step">
+                <span class="number">1</span> <i class="fas fa-mobile-alt"></i> Choisissez un restaurant
+            </div>
+            <div class="step">
                 <span class="number">2</span> <i class="fas fa-list-ul"></i> Composez votre menu
-            </li>
-            <li>
+            </div>
+            <div class="step step--violet">
                 <span class="number">3</span> <i class="fas fa-store"></i> Dégustez au restaurant
-            </li>
-        </ul>
+            </div>
+        </div>
         
     </section>
 
-    <section id="restaurants-list">
+    <section id="restaurants-list" class="restaurants-list">
 
         <h2>Restaurants</h2>
 
-        <a href="html/la_palette_du_gout.html">
-            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Assiette apetissante">
-            <span class="restaurants__tag">Nouveau</span>
-            <h3>La palette du goût</h3>
-            <i class="far fa-heart"></i>
-            <p>Ménilmontant</p>
-        </a>
-        
-        <a href="html/la_note_enchantee.html">
-            <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Assiette apetissante">
-            <span class="restaurants__tag">Nouveau</span>
-            <h3>La note enchantée</h3>
-            <i class="far fa-heart"></i>
-            <p>Charonne</p>
-        </a>
-        
-        <a href="html/a_la_francaise.html">
-            <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Assiette apetissante">
-            <h3>&Agrave; la française</h3>
-            <i class="far fa-heart"></i>
-            <p>Cité Rouge</p>
-        </a>
-        
-        <a href="html/le_delice_des_sens.html">
-            <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Assiette apetissante">
-            <h3>Le délice des sens</h3>
-            <i class="far fa-heart"></i>
-            <p>Folie-Méricourt</p>
-        </a>
+        <div class="restaurants-list__container">
+
+            <a href="html/la_palette_du_gout.html" class="restaurant-card">
+                <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Assiette apetissante">
+                <span class="restaurant-card__tag">Nouveau</span>
+                <h3>La palette du goût</h3>
+                <i class="far fa-heart"></i>
+                <p>Ménilmontant</p>
+            </a>
+            
+            <a href="html/la_note_enchantee.html" class="restaurant-card">
+                <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Assiette apetissante">
+                <span class="restaurant-card__tag">Nouveau</span>
+                <h3>La note enchantée</h3>
+                <i class="far fa-heart"></i>
+                <p>Charonne</p>
+            </a>
+            
+            <a href="html/a_la_francaise.html" class="restaurant-card">
+                <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Assiette apetissante">
+                <h3>&Agrave; la française</h3>
+                <i class="far fa-heart"></i>
+                <p>Cité Rouge</p>
+            </a>
+            
+            <a href="html/le_delice_des_sens.html" class="restaurant-card">
+                <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Assiette apetissante">
+                <h3>Le délice des sens</h3>
+                <i class="far fa-heart"></i>
+                <p>Folie-Méricourt</p>
+            </a>
+
+        </div>
 
     </section>
 
     <footer>
         <h1>ohmyfood</h1>
         <ul>
-            <li><i class="fas fa-utensils"></i> Proposer un restaurant</li>
-            <li><i class="fas fa-hands-helping"></i> Devenir partenaire</li>
+            <li><i class="fas fa-utensils fa-fw"></i> Proposer un restaurant</li>
+            <li><i class="fas fa-hands-helping fa-fw"></i> Devenir partenaire</li>
             <li>Mentions légales</li>
             <li>Contact</li>
         </ul>

@@ -15,76 +15,16 @@ body {
   margin: 0;
 }
 
-section img {
+.secondary-page section img {
   display: none;
 }
 
-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-header__logo {
-  width: 40%;
-  margin-left: 30%;
-  margin-right: 30%;
-}
-header nav {
-  position: absolute;
-  left: 0;
+a {
+  text-decoration: none;
+  color: black;
 }
 
-footer {
-  color: white;
-  background-color: #353535;
-}
-footer h1, footer ul {
-  width: 86%;
-  margin: auto;
-}
-footer h1 {
-  font-size: 1.2rem;
-}
-footer ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-footer ul li {
-  font-size: 1.2rem;
-}
-
-.site-introducer {
-  text-align: center;
-  background-color: #f6f6f6;
-}
-.site-introducer__location {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  background: linear-gradient(to top, #eaeaea, #eaeaea 90%, #cbcbcb);
-}
-.site-introducer h1 {
-  width: 75%;
-  margin-left: auto;
-  margin-right: auto;
-}
-.site-introducer h1 + p {
-  width: 85%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.functionning-steps {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-}
-.functionning-steps ul {
-  list-style-type: none;
-  padding: 0;
-}
-.functionning-steps ul li {
+.step {
   background-color: #f6f6f6;
   display: flex;
   flex-direction: row;
@@ -93,10 +33,11 @@ footer ul li {
   position: relative;
   padding-top: 30px;
   padding-bottom: 30px;
-  margin-bottom: 20px;
   margin-left: 12px;
+  border-radius: 22px;
+  margin-bottom: 20px;
 }
-.functionning-steps ul li .number {
+.step .number {
   position: absolute;
   left: -12px;
   color: white;
@@ -108,19 +49,147 @@ footer ul li {
   justify-content: center;
   align-items: center;
 }
-.functionning-steps ul li .fas {
+.step .fas {
   color: #6a6a6a;
   margin-left: 35px;
   width: 12%;
 }
-.functionning-steps ul li:nth-child(3) {
+.step--violet {
   background-color: #e7d9f7;
 }
-.functionning-steps ul li:nth-child(3) .fas {
+.step--violet .fas {
   color: #9356DC;
 }
 
-#restaurants-list {
+.restaurant-card {
+  height: 250px;
+  background-color: white;
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  position: relative;
+}
+.restaurant-card__tag {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  background-color: #99E2D0;
+  color: #2c9c81;
+  padding: 5px;
+  border-radius: 3px;
+}
+.restaurant-card .far {
+  position: absolute;
+  bottom: 12%;
+  right: 10%;
+}
+.restaurant-card img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+}
+.restaurant-card h3 {
+  margin: 0;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+.restaurant-card p {
+  margin: 0;
+  padding-left: 15px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+header .logo {
+  width: 43%;
+  padding-bottom: 0;
+}
+header nav {
+  position: absolute;
+  left: 5%;
+  font-size: 1.2rem;
+}
+header nav a {
+  color: #353535;
+}
+
+footer {
+  color: white;
+  background-color: #353535;
+  padding-top: 22px;
+  padding-bottom: 27px;
+}
+footer h1, footer ul {
+  width: 86%;
+  margin: auto;
+}
+footer h1 {
+  font-size: 1.15rem;
+  font-weight: normal;
+  margin-bottom: 17px;
+}
+footer ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+footer ul li {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+footer ul li .fas {
+  font-size: 0.8rem;
+  margin-right: 6px;
+}
+
+.site-introducer {
+  text-align: center;
+  background-color: #f6f6f6;
+  padding-bottom: 50px;
+}
+.site-introducer__location {
+  margin: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background: linear-gradient(to top, #eaeaea, #eaeaea 90%, #cbcbcb);
+  color: #353535;
+}
+.site-introducer__location .fas {
+  margin-right: 12px;
+}
+.site-introducer h1 {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.site-introducer h1 + p {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 28px;
+}
+
+.functionning-steps {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+.restaurants-list {
+  background-color: #f6f6f6;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.restaurants-list h2, .restaurants-list__container {
   width: 90%;
   margin-left: auto;
   margin-right: auto;

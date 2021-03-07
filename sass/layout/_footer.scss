@@ -2,20 +2,33 @@ footer{
     color: $color-footer-font;
     background-color: $color-footer-bg;
 
+    padding-top:22px;
+    padding-bottom:27px;
+
     h1, ul{
         width:86%;
         margin:auto;
     }
 
     h1{
-        font-size:1.2rem;
+        font-size:1.15rem;
+        font-weight: normal;
+        margin-bottom:17px;
     }
 
     ul{
         list-style-type:none;
         padding-left:0;
+
         li{
-            font-size:1.2rem;
+            font-size:1rem;
+            margin-bottom:8px;
+
+            .fas{
+                font-size:0.8rem;
+                margin-right:6px;
+            }
+
         }
     }
 
