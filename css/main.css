@@ -15,10 +15,6 @@ body {
   margin: 0;
 }
 
-.secondary-page section img {
-  display: none;
-}
-
 a {
   text-decoration: none;
   color: black;
@@ -105,7 +101,7 @@ a {
   bottom: 12%;
   right: 8%;
   color: #353535;
-  font-size: 1.5rem;
+  font-size: 1.55rem;
   font-weight: 200;
 }
 .restaurant-card img {
@@ -125,6 +121,30 @@ a {
   margin: 0;
   padding-left: 15px;
   font-weight: 300;
+}
+
+.dish {
+  background-color: white;
+  box-shadow: 0px 6px 12px #dbdbdb;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  padding: h3;
+  padding-margin: 0;
+  padding-padding: 0;
+}
+.dish p {
+  margin: 0;
+  padding: 0;
+}
+.dish .price {
+  margin: 0;
+  padding: 0;
+  color: #353535;
+  font-weight: bold;
+}
+.dish .fas {
+  margin: 0;
+  padding: 0;
 }
 
 header {
@@ -225,6 +245,78 @@ footer ul li .fas {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.restaurant-introducer {
+  height: 290px;
+  position: relative;
+}
+.restaurant-introducer img {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+}
+.restaurant-introducer h1 {
+  position: absolute;
+  bottom: 0;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding-top: 32px;
+  padding-left: 22px;
+  padding-right: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: whitesmoke;
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
+  font-size: 1.8rem;
+  font-weight: normal;
+}
+.restaurant-introducer .far {
+  font-size: 1.55rem;
+  color: #353535;
+}
+
+.dishes-list {
+  padding-top: 15px;
+  background-color: whitesmoke;
+}
+.dishes-list h2, .dishes-list HR {
+  margin-left: 6%;
+}
+.dishes-list h2 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #353535;
+  margin-bottom: 0;
+}
+.dishes-list HR {
+  width: 11%;
+  height: 3px;
+  color: #99E2D0;
+  background-color: #99E2D0;
+  border: 0;
+  margin-top: 5px;
+}
+.dishes-list__container {
+  width: 92%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1px;
+}
+
+.orderbutton-container {
+  background-color: whitesmoke;
+  padding-top: 45px;
+  padding-bottom: 100px;
+  text-align: center;
+}
+.orderbutton-container .button {
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 /*# sourceMappingURL=main.css.map */

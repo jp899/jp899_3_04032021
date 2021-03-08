@@ -1,0 +1,28 @@
+
+.dish{
+    background-color: white;
+    @include box-shadow;
+    border-radius: 16px;
+    margin-bottom:16px;
+
+    padding:
+    
+    h3{
+        margin:0;
+        padding:0;
+    }
+    p{
+        margin:0;
+        padding:0;
+    }
+    .price{
+        margin:0;
+        padding:0;
+        color:$color-font-alternative;
+        font-weight:bold;
+    }
+    .fas{
+        margin:0;
+        padding:0;
+    }
+}

@@ -35,6 +35,7 @@
         font-size:1.1rem;
         color:$color-font-alternative;
     }
+
 }
 
 .functionning-steps{
@@ -63,5 +64,99 @@
         margin-right:auto;
     }
 
+}
 
+.restaurant-introducer{
+    height:290px;
+    position: relative;
+
+    img{
+        width:100%;
+        height:90%;
+        object-fit:cover;
+    }
+
+    h1{
+        position: absolute;
+        bottom:0;
+
+        box-sizing: border-box;
+        width:100%;
+        margin:0;
+        padding-top:32px;
+        padding-left:22px;
+        padding-right:40px;
+
+        display:flex;
+        flex-direction:row;
+        justify-content: space-between;
+        align-items:center;
+       
+        background-color:$color-bg;
+        border-top-right-radius:40px;
+        border-top-left-radius:40px;
+        
+        font-size:1.8rem;
+        font-weight: normal;
+    }
+
+    .far{
+        font-size:1.55rem;
+        color:$color-font-alternative;
+    }
+}
+
+
+
+.dishes-list{
+
+    padding-top:15px;
+    background-color:$color-bg;
+
+ 
+    h2,HR{
+        margin-left:6%;
+    }
+
+    h2{
+        font-size: 1rem;
+        font-weight:400;
+        color:$color-font-alternative;
+
+        margin-bottom:0;
+
+    }
+
+
+    HR{
+        width:11%;
+        height:3px;
+        color:$color-tertiary;
+        background-color: $color-tertiary;
+        border:0;
+        margin-top:5px;
+    }
+
+
+    &__container{
+        width:92%;
+        margin-left:auto;
+        margin-right:auto;
+        padding-bottom:1px;
+    }
+}
+
+
+
+
+.orderbutton-container{
+    background-color:$color-bg;
+    padding-top:45px;
+    padding-bottom:100px;
+    text-align:center;
+
+    .button{
+        padding-left: 50px;
+        padding-right:50px;
+    }
 }
