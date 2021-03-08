@@ -1,0 +1,37 @@
+
+// Affichage d'une ombre identique pour tous les éléments avec ombre
+@mixin box-shadow($intensity:10%){
+    box-shadow: 0px 6px 12px darken($color-bg,$intensity);
+}
+
+
+
+
+
+
+// Gestion des breakpoints
+
+@mixin mobile-only {
+    @media all and (max-width: map-get($breakpoints, mobile-max)){
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media all and (min-width: map-get($breakpoints, mobile-max)) and (max-width: map-get($breakpoints, tablet-portrait-max)){
+        @content;
+    }
+}
+
+// Affichage commun : tablettes en mode landscape / PC de petites résolutions
+@mixin pc-little{
+    @media all and (min-width:map-get($breakpoints, tablet-portrait-max)) and (max-width: map-get($breakpoints, pc-large-min)){
+        @content;
+    }
+}
+
+@mixin pc-large{
+    @media all and (min-width: map-get($breakpoints, pc-large)){
+        @content;
+    }
+}

@@ -1,0 +1,11 @@
+
+.button{
+    border-radius: 30px;
+    background-color: $color-primary;
+    // Gradient top vers bot + légerement left vers right 
+    background: linear-gradient(175deg, $color-secondary, $color-primary);
+    color:white;
+    padding: 15px 25px 15px 25px;
+
+    @include box-shadow(30%);
+}

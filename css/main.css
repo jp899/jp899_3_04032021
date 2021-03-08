@@ -24,21 +24,31 @@ a {
   color: black;
 }
 
+.button {
+  border-radius: 30px;
+  background-color: #9356DC;
+  background: linear-gradient(175deg, #FF79DA, #9356DC);
+  color: white;
+  padding: 15px 25px 15px 25px;
+  box-shadow: 0px 6px 12px #a8a8a8;
+}
+
 .step {
-  background-color: whitesmoke;
   display: flex;
   flex-direction: row;
   justify-content: left;
   align-items: center;
   position: relative;
+  background-color: whitesmoke;
+  box-shadow: 0px 6px 12px #dbdbdb;
+  border-radius: 22px;
   padding-top: 27px;
   padding-bottom: 27px;
   margin-left: 12px;
-  border-radius: 22px;
   margin-bottom: 22px;
 }
 .step .number {
-  font-size: 0.9em;
+  font-size: 0.9rem;
   position: absolute;
   left: -12px;
   color: white;
@@ -51,19 +61,19 @@ a {
   align-items: center;
 }
 .step .fas {
-  font-size: 1.1em;
+  font-size: 1.1rem;
   color: dimgray;
   margin-left: 35px;
   width: 12%;
 }
 .step .fa-mobile-alt {
-  font-size: 1.35em;
+  font-size: 1.35rem;
 }
 .step .text {
   font-weight: 500;
 }
 .step--violet {
-  background-color: #e7d9f7;
+  background-color: #f4eefc;
 }
 .step--violet .fas {
   color: #9356DC;
@@ -77,20 +87,26 @@ a {
   flex-direction: column;
   margin-bottom: 20px;
   position: relative;
+  box-shadow: 0px 6px 12px #dbdbdb;
 }
 .restaurant-card__tag {
   position: absolute;
-  top: 5%;
-  right: 5%;
+  top: 6%;
+  right: 4%;
   background-color: #99E2D0;
-  color: #2c9c81;
-  padding: 5px;
-  border-radius: 3px;
+  color: #26856d;
+  padding: 6px 11px 6px 11px;
+  border-radius: 2px;
+  font-size: 0.85rem;
+  font-weight: 500;
 }
 .restaurant-card .far {
   position: absolute;
   bottom: 12%;
-  right: 10%;
+  right: 8%;
+  color: #353535;
+  font-size: 1.5rem;
+  font-weight: 200;
 }
 .restaurant-card img {
   width: 100%;
@@ -164,7 +180,7 @@ footer ul li .fas {
 .site-introducer {
   text-align: center;
   background-color: whitesmoke;
-  padding-bottom: 50px;
+  padding-bottom: 70px;
 }
 .site-introducer__location {
   margin: 0;
@@ -187,9 +203,9 @@ footer ul li .fas {
   width: 85%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 28px;
+  margin-bottom: 48px;
   font-weight: 300;
-  font-size: 1.1em;
+  font-size: 1.1rem;
   color: #353535;
 }
 
@@ -197,7 +213,8 @@ footer ul li .fas {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 50px;
+  margin-top: 45px;
+  margin-bottom: 65px;
 }
 .restaurants-list {
   background-color: whitesmoke;

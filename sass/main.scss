@@ -5,7 +5,8 @@
 
 //Couleurs, tailles de police générale et autres variables
 @import "./utils/variables.scss";
-
+//Mixins et Fonctions
+@import "./utils/mixins.scss";
 
 //Règles générales
 //Règles générales sur les polices 
@@ -15,6 +16,7 @@
 
 
 //Règles spécifiques aux composants élémentaires
+@import "./components/button.scss";
 @import "./components/step.scss";
 @import "./components/restaurant-card.scss";
 

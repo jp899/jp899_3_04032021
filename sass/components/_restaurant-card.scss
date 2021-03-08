@@ -10,21 +10,28 @@
 
     position:relative;
 
+    @include box-shadow;
+
     &__tag{
         position:absolute;
-        top:5%;
-        right:5%;
+        top:6%;
+        right:4%;
 
         background-color: $color-tertiary;
-        color: darken($color-tertiary, 35%);
-        padding:5px;
-        border-radius:3px;
+        color: scale-color($color-tertiary, $lightness: -55%);
+        padding:6px 11px 6px 11px;
+        border-radius:2px;
+        font-size:0.85rem;
+        font-weight:500;
     }
 
     .far{
         position:absolute;
         bottom: 12%;
-        right:10%;
+        right:8%;
+        color:$color-quaternary;
+        font-size:1.5rem;
+        font-weight:200;
     }
 
     img{
