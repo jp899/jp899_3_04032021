@@ -10,7 +10,7 @@
         // Gradient de bas en haut dont le dégradé ne commence qu'à 90%.
         background: linear-gradient(to top, $color-locate-bg, $color-locate-bg 90%, darken($color-locate-bg, 12%));
 
-        color:$color-font-dark-grey;
+        color:$color-font-alternative;
         font-weight:500;
 
         .fas{
@@ -33,7 +33,7 @@
 
         font-weight:300;
         font-size:1.1em;
-        color:$color-font-dark-grey;
+        color:$color-font-alternative;
     }
 }
 
@@ -61,5 +61,6 @@
         margin-left:auto;
         margin-right:auto;
     }
+
 
 }

@@ -6,21 +6,24 @@
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
-$color-dark-grey:rgb(53, 53, 53);
+$color-quaternary:rgb(53, 53, 53);
+
+
 
 //couleur du background général
-$color-bg: rgb(246, 246, 246);
+$color-bg: scale-color($color-quaternary, $lightness: +95%);
 
-//couleur du background de locate(A remplacer par un darken du génbéral,??)
-$color-locate-bg:rgb(234,234,234);
+//couleur du background de locate
+$color-locate-bg: lighten($color-quaternary, 71%);
 
-//couleurs du footer
-$color-footer-bg:$color-dark-grey;
+//couleurs du background footer
+$color-footer-bg:$color-quaternary;
 $color-footer-font:white;
 
+//Couleurs de police secondaire
+$color-font-alternative:$color-quaternary;
 
-//Couleurs de police
-$color-font-dark-grey:$color-dark-grey;
+
 
 //Taille de police définie dans le html (servant de base aux unités en rem)
 $base-font-size:medium;
