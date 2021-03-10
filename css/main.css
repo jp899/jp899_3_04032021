@@ -196,6 +196,9 @@ footer ul li .fas {
   font-size: 0.8rem;
   margin-right: 6px;
 }
+footer ul li a {
+  color: white;
+}
 
 .site-introducer {
   text-align: center;
@@ -236,6 +239,7 @@ footer ul li .fas {
   margin-top: 45px;
   margin-bottom: 65px;
 }
+
 .restaurants-list {
   background-color: whitesmoke;
   padding-top: 30px;
