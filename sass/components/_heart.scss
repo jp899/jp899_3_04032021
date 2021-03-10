@@ -1,0 +1,61 @@
+
+@keyframes progressive-reveal{
+    0%{opacity:0;}
+    100%{opacity:1;}
+}
+
+@keyframes progressive-hide{
+    0%{opacity:1;}
+    100%{opacity:0;}
+}
+
+
+.fa-heart{
+
+    color:$color-font-alternative;
+    font-size:1.55rem;
+    width:25px;
+    height:25px;
+    position:relative;
+    cursor:pointer;
+  
+
+
+    &::after{
+        // Insertion d'un coeur plein (weight=900 pour spécifier le style désiré : Solid)
+        font-family:"Font Awesome 5 Free";
+        content:"\f004";
+        font-weight:900;
+
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index:2;
+       
+        // Appliquer un dégradé de couleur sur le coeur plein inséré
+        background: linear-gradient(45deg, $color-secondary, $color-primary );
+        background-clip: text; //propriété à préfixer de webkit- pour chrome
+        -webkit-background-clip: text; //propriété à préfixer de webkit- pour chrome
+        -webkit-text-fill-color: transparent;
+
+        opacity:0;
+
+   
+    }
+
+    &:active{
+
+        &::before{
+            //ne plus afficher le contour noir du coeur creux
+            //car le coeur plein et le coeur creux n'ont pas exactement la même forme et ne se supperposent pas bien
+            animation: progressive-hide 1000ms ease-in-out forwards; 
+        }
+
+        &::after{
+            animation: progressive-reveal 1000ms ease-in-out forwards; 
+            
+        }
+    }
+
+}
+
