@@ -14,6 +14,8 @@ html {
 
 body {
   margin: 0;
+  z-index: 0;
+  position: relative;
 }
 
 a {
@@ -395,6 +397,39 @@ footer ul li a {
 .order-container__button {
   padding-left: 50px;
   padding-right: 50px;
+}
+
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  99% {
+    z-index: 100;
+  }
+  100% {
+    opacity: 0;
+    z-index: -100;
+  }
+}
+.main-page {
+  margin: 0;
+  z-index: 0;
+  position: relative;
+}
+.main-page::after {
+  content: "";
+  background: linear-gradient(135deg, #FF79DA, #9356DC);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  opacity: 1;
+  animation: loader 5000ms ease-in-out forwards;
 }
 
 /*# sourceMappingURL=main.css.map */
