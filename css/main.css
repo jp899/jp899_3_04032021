@@ -21,7 +21,7 @@ a {
   color: black;
 }
 
-.fa-heart {
+.heart-icon {
   color: #353535;
   font-size: 1.55rem;
   width: 26px;
@@ -29,11 +29,11 @@ a {
   position: relative;
   cursor: pointer;
 }
-.fa-heart::before {
+.heart-icon::before {
   opacity: 1;
   transition: opacity 1000ms ease-in-out;
 }
-.fa-heart::after {
+.heart-icon::after {
   font-family: "Font Awesome 5 Free";
   content: "";
   font-weight: 900;
@@ -48,10 +48,10 @@ a {
   opacity: 0;
   transition: opacity 1000ms ease-in-out;
 }
-.fa-heart:hover::before {
+.heart-icon:hover::before {
   opacity: 0;
 }
-.fa-heart:hover::after {
+.heart-icon:hover::after {
   opacity: 1;
 }
 
@@ -81,7 +81,7 @@ a {
   margin-left: 12px;
   margin-bottom: 22px;
 }
-.step .number {
+.step__number {
   font-size: 0.9rem;
   position: absolute;
   left: -12px;
@@ -94,7 +94,7 @@ a {
   justify-content: center;
   align-items: center;
 }
-.step .fas {
+.step__icon {
   font-size: 1.1rem;
   color: dimgray;
   margin-left: 35px;
@@ -103,13 +103,13 @@ a {
 .step .fa-mobile-alt {
   font-size: 1.35rem;
 }
-.step .text {
+.step__text {
   font-weight: 500;
 }
 .step--violet {
   background-color: #f4eefc;
 }
-.step--violet .fas {
+.step--violet .step__icon {
   color: #9356DC;
 }
 
@@ -122,7 +122,7 @@ a {
   position: relative;
   box-shadow: 0px 6px 12px #dbdbdb;
 }
-.restaurant-card .far {
+.restaurant-card__icon {
   position: absolute;
   bottom: 12%;
   right: 8%;
@@ -130,17 +130,6 @@ a {
 .restaurant-card a {
   position: relative;
   border-radius: 22px;
-}
-.restaurant-card a .tag {
-  position: absolute;
-  top: 6%;
-  right: 4%;
-  background-color: #99E2D0;
-  color: #26856d;
-  padding: 6px 11px 6px 11px;
-  border-radius: 2px;
-  font-size: 0.85rem;
-  font-weight: 500;
 }
 .restaurant-card a img {
   width: 100%;
@@ -159,6 +148,17 @@ a {
   margin: 0;
   padding-left: 15px;
   font-weight: 300;
+}
+.restaurant-card__tag {
+  position: absolute;
+  top: 6%;
+  right: 4%;
+  background-color: #99E2D0;
+  color: #26856d;
+  padding: 6px 11px 6px 11px;
+  border-radius: 2px;
+  font-size: 0.85rem;
+  font-weight: 500;
 }
 
 @keyframes rotato {
@@ -220,7 +220,7 @@ a {
 .dish:hover .dish__tick {
   margin-right: 0;
 }
-.dish:hover .dish__tick .fas {
+.dish:hover .dish__tick__icon {
   animation: rotato 350ms 150ms ease-in-out both;
 }
 
@@ -233,7 +233,7 @@ header {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-header .logo {
+header .header__logo {
   width: 43%;
   padding-bottom: 0;
 }
@@ -269,7 +269,7 @@ footer ul li {
   font-size: 1rem;
   margin-bottom: 8px;
 }
-footer ul li .fas {
+footer ul li .footer__icon {
   font-size: 0.8rem;
   margin-right: 6px;
 }
@@ -290,7 +290,7 @@ footer ul li a {
   color: #353535;
   font-weight: 500;
 }
-.site-introducer__location .fas {
+.site-introducer__location .restaurant-introducer__icon {
   margin-right: 12px;
 }
 .site-introducer h1 {
@@ -377,6 +377,7 @@ footer ul li a {
   background-color: #99E2D0;
   border: 0;
   margin-top: 5px;
+  margin-bottom: 13px;
 }
 .dishes-list__container {
   width: 92%;
@@ -385,13 +386,13 @@ footer ul li a {
   padding-bottom: 1px;
 }
 
-.orderbutton-container {
+.order-container {
   background-color: whitesmoke;
   padding-top: 45px;
   padding-bottom: 100px;
   text-align: center;
 }
-.orderbutton-container .button {
+.order-container__button {
   padding-left: 50px;
   padding-right: 50px;
 }

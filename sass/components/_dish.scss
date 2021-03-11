@@ -34,6 +34,7 @@
             overflow: hidden;
             text-overflow: ellipsis; 
         }
+        
         p{
             margin:0;
             font-weight:300;
@@ -75,7 +76,8 @@
     &:hover{
         .dish__tick{
             margin-right:0;
-            .fas{
+            
+            &__icon{
                 animation: rotato 350ms 150ms ease-in-out both; 
             }
         }
