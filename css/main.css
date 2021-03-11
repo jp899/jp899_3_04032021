@@ -163,7 +163,7 @@ a {
   font-weight: 500;
 }
 
-@keyframes rotato {
+@keyframes rotator {
   100% {
     transform: rotate(360deg);
   }
@@ -223,7 +223,7 @@ a {
   margin-right: 0;
 }
 .dish:hover .dish__tick__icon {
-  animation: rotato 350ms 150ms ease-in-out both;
+  animation: rotator 350ms 150ms ease-in-out both;
 }
 
 header {
@@ -359,6 +359,16 @@ footer ul li a {
   font-weight: normal;
 }
 
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(15%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
 .dishes-list {
   padding-top: 15px;
   background-color: whitesmoke;
@@ -386,6 +396,18 @@ footer ul li a {
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 1px;
+}
+.dishes-list__container > .dish:nth-child(1) {
+  animation: appear 800ms 200ms ease-in-out both;
+}
+.dishes-list__container > .dish:nth-child(2) {
+  animation: appear 800ms 400ms ease-in-out both;
+}
+.dishes-list__container > .dish:nth-child(3) {
+  animation: appear 800ms 600ms ease-in-out both;
+}
+.dishes-list__container > .dish:nth-child(4) {
+  animation: appear 800ms 800ms ease-in-out both;
 }
 
 .order-container {

@@ -1,9 +1,8 @@
 
-@keyframes rotato{
+@keyframes rotator{
     0%{}
     100%{transform:rotate(360deg);}
 }
-
 
 .dish{
     background-color: white;
@@ -78,7 +77,7 @@
             margin-right:0;
             
             &__icon{
-                animation: rotato 350ms 150ms ease-in-out both; 
+                animation: rotator 350ms 150ms ease-in-out both; 
             }
         }
     }

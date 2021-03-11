@@ -5,6 +5,14 @@
 }
 
 
+//Création d'une animation avec délai de déclenchement décalé sur chacun des enfants
+@mixin async-animate($max-children, $animation, $duration, $shift, $timing, $fill-mode){
+    @for $i from 1 through $max-children{
+        &:nth-child(#{$i}) {
+            animation : #{$animation} $duration #{$i * $shift} $timing $fill-mode;
+        }
+    }
+}
 
 
 
