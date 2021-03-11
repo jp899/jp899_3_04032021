@@ -5,22 +5,68 @@
     border-radius: 16px;
     margin-bottom:16px;
 
-    h3{
-        margin:0;
-        padding:0;
+ 
+    //pas de retour à la ligne automatique
+    white-space: nowrap;
+    overflow: hidden;
+
+    display:flex;
+    flex-direction: row;
+
+    &__description{
+        width:68%;
+        box-sizing:border-box;
+        padding: 11px 13px 11px 13px;
+
+
+        h3{
+            margin:0;
+            margin-bottom:5px;
+            font-weight:500;
+          
+            
+            //On cache le texte qui dépasse et on met des points de suspension
+            overflow: hidden;
+            text-overflow: ellipsis; 
+        }
+        p{
+            margin:0;
+            font-weight:300;
+            font-size:0.95rem;
+            
+            overflow: hidden;
+            text-overflow: ellipsis; 
+        }
+
     }
-    p{
-        margin:0;
-        padding:0;
-    }
-    .price{
-        margin:0;
-        padding:0;
+    
+    &__price{
+        width:15%;
+        box-sizing:border-box;
+        padding-bottom:11px;
+  
         color:$color-font-alternative;
         font-weight:bold;
+        display:flex;
+        flex-direction:column;
+        justify-content:flex-end;
+        font-size:0.95rem;
+
+ 
     }
-    .fas{
-        margin:0;
-        padding:0;
+
+    &__tick{
+        background-color:$color-tertiary;
+        width:17%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+
+        color:white;
+        font-size:1.3rem;
+        
+        
     }
+
+
 }
