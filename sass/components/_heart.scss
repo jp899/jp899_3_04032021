@@ -1,15 +1,4 @@
 
-@keyframes progressive-reveal{
-    0%{opacity:0;}
-    100%{opacity:1;}
-}
-
-@keyframes progressive-hide{
-    0%{opacity:1;}
-    100%{opacity:0;}
-}
-
-
 .fa-heart{
 
     color:$color-font-alternative;
@@ -20,7 +9,11 @@
     cursor:pointer;
 
 
-  
+    //Cible l'icone définie en html (coeur creux)
+    &::before{
+        opacity:1;
+        transition: opacity 1000ms ease-in-out;
+    }
 
 
     &::after{
@@ -41,21 +34,20 @@
         -webkit-text-fill-color: transparent;
 
         opacity:0;
-
+        transition: opacity 1000ms ease-in-out;
    
     }
 
-    &:active{
+    &:hover{
 
         &::before{
             //ne plus afficher le contour noir du coeur creux
             //car le coeur plein et le coeur creux n'ont pas exactement la même forme et ne se supperposent pas bien
-            animation: progressive-hide 1000ms ease-in-out forwards; 
+            opacity:0;
         }
 
         &::after{
-            animation: progressive-reveal 1000ms ease-in-out forwards; 
-            
+            opacity:1;
         }
     }
 

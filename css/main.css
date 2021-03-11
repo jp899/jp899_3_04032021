@@ -21,22 +21,6 @@ a {
   color: black;
 }
 
-@keyframes progressive-reveal {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes progressive-hide {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 .fa-heart {
   color: #353535;
   font-size: 1.55rem;
@@ -44,6 +28,10 @@ a {
   height: 26px;
   position: relative;
   cursor: pointer;
+}
+.fa-heart::before {
+  opacity: 1;
+  transition: opacity 1000ms ease-in-out;
 }
 .fa-heart::after {
   font-family: "Font Awesome 5 Free";
@@ -58,12 +46,13 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
+  transition: opacity 1000ms ease-in-out;
 }
-.fa-heart:active::before {
-  animation: progressive-hide 1000ms ease-in-out forwards;
+.fa-heart:hover::before {
+  opacity: 0;
 }
-.fa-heart:active::after {
-  animation: progressive-reveal 1000ms ease-in-out forwards;
+.fa-heart:hover::after {
+  opacity: 1;
 }
 
 .button {
@@ -172,18 +161,24 @@ a {
   font-weight: 300;
 }
 
+@keyframes rotato {
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .dish {
   background-color: white;
   box-shadow: 0px 6px 12px #dbdbdb;
   border-radius: 16px;
   margin-bottom: 16px;
-  white-space: nowrap;
-  overflow: hidden;
   display: flex;
   flex-direction: row;
+  overflow: hidden;
 }
 .dish__description {
-  width: 68%;
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
   box-sizing: border-box;
   padding: 11px 13px 11px 13px;
 }
@@ -202,8 +197,7 @@ a {
   text-overflow: ellipsis;
 }
 .dish__price {
-  width: 15%;
-  box-sizing: border-box;
+  margin-right: 22px;
   padding-bottom: 11px;
   color: #353535;
   font-weight: bold;
@@ -213,13 +207,21 @@ a {
   font-size: 0.95rem;
 }
 .dish__tick {
-  background-color: #99E2D0;
-  width: 17%;
+  width: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #99E2D0;
   color: white;
   font-size: 1.3rem;
+  margin-right: -60px;
+  transition: margin-right 500ms ease-in-out;
+}
+.dish:hover .dish__tick {
+  margin-right: 0;
+}
+.dish:hover .dish__tick .fas {
+  animation: rotato 350ms 150ms ease-in-out both;
 }
 
 header {
