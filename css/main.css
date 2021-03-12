@@ -4,7 +4,7 @@
   font-family: "Roboto", sans-serif;
 }
 
-.restaurant-introducer h1, footer h1 {
+.restaurant-introducer h2, footer h1 {
   font-family: "Shrikhand", cursive;
 }
 
@@ -44,7 +44,6 @@ a {
   top: 0;
   z-index: 2;
   background: linear-gradient(45deg, #FF79DA, #9356DC);
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
@@ -295,13 +294,13 @@ footer ul li a {
 .site-introducer__location .restaurant-introducer__icon {
   margin-right: 12px;
 }
-.site-introducer h1 {
+.site-introducer h2 {
   width: 75%;
   margin-left: auto;
   margin-right: auto;
   padding-top: 18px;
 }
-.site-introducer h1 + p {
+.site-introducer h2 + p {
   width: 85%;
   margin-left: auto;
   margin-right: auto;
@@ -339,7 +338,7 @@ footer ul li a {
   height: 90%;
   object-fit: cover;
 }
-.restaurant-introducer h1 {
+.restaurant-introducer h2 {
   position: absolute;
   bottom: 0;
   box-sizing: border-box;
@@ -385,7 +384,6 @@ footer ul li a {
 .dishes-list HR {
   width: 11%;
   height: 3px;
-  color: #99E2D0;
   background-color: #99E2D0;
   border: 0;
   margin-top: 5px;
@@ -398,16 +396,16 @@ footer ul li a {
   padding-bottom: 1px;
 }
 .dishes-list__container > .dish:nth-child(1) {
-  animation: appear 800ms 200ms ease-in-out both;
+  animation: appear 700ms 200ms ease-in-out both;
 }
 .dishes-list__container > .dish:nth-child(2) {
-  animation: appear 800ms 400ms ease-in-out both;
+  animation: appear 700ms 400ms ease-in-out both;
 }
 .dishes-list__container > .dish:nth-child(3) {
-  animation: appear 800ms 600ms ease-in-out both;
+  animation: appear 700ms 600ms ease-in-out both;
 }
 .dishes-list__container > .dish:nth-child(4) {
-  animation: appear 800ms 800ms ease-in-out both;
+  animation: appear 700ms 800ms ease-in-out both;
 }
 
 .order-container {
@@ -436,22 +434,109 @@ footer ul li a {
     z-index: -100;
   }
 }
+@keyframes horizontal-move {
+  0% {
+    left: 0%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+@keyframes vertical-move {
+  0% {
+    top: 0%;
+  }
+  50% {
+    top: 100%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .main-page {
   margin: 0;
   z-index: 0;
   position: relative;
 }
-.main-page::after {
-  content: "";
-  background: linear-gradient(135deg, #FF79DA, #9356DC);
+.main-page .loader {
+  background: linear-gradient(135deg, #fface8, #ae80e5);
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   z-index: 100;
-  opacity: 1;
-  animation: loader 5000ms ease-in-out forwards;
+  animation: loader 3000ms ease-in-out forwards;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-page .loader__container {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 66%;
+  height: 15%;
+}
+@media all and (min-width: 767.99px) and (max-width: 991.99px) {
+  .main-page .loader__container {
+    width: 66%;
+    height: 20%;
+  }
+}
+@media all and (min-width: 991.99px) {
+  .main-page .loader__container {
+    width: 35%;
+    height: 25%;
+  }
+}
+.main-page .loader__ball {
+  width: 8vw;
+  height: 8vw;
+  margin-left: -4vw;
+  margin-top: -4vw;
+  position: absolute;
+  background: linear-gradient(180deg, white 50%, #e6e6e6);
+  border-radius: 50%;
+  opacity: 0;
+  animation: horizontal-move 2s 2, vertical-move 1s 4, fade-in 1s 1 both;
+  animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1), ease-in-out, cubic-bezier(0.7, -0.2, 0.25, 0.85);
+}
+@media all and (min-width: 991.99px) {
+  .main-page .loader__ball {
+    width: 3vw;
+    height: 3vw;
+    margin-left: -1.5vw;
+    margin-top: -1.5vw;
+  }
+}
+.main-page .loader__ball:nth-child(1) {
+  animation-delay: 0s, 0.25s, 0s;
+}
+.main-page .loader__ball:nth-child(2) {
+  animation-delay: 0.2s, 0.45s, 0.2s;
+}
+.main-page .loader__ball:nth-child(3) {
+  animation-delay: 0.4s, 0.65s, 0.4s;
+}
+.main-page .loader__ball:nth-child(4) {
+  animation-delay: 0.6s, 0.85s, 0.6s;
+}
+.main-page .loader__ball:nth-child(5) {
+  animation-delay: 0.8s, 1.05s, 0.8s;
 }
 
 /*# sourceMappingURL=main.css.map */

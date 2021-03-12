@@ -1,7 +1,13 @@
 //GESTION D'UN LOADER UNIQUEMENT POUR LA PAGE PRINCIPALE
+//Sur un fond ce couleur dégradé, Plusieurs billes se déplacent en formant un symbole infini
+//la trajectoire est gérée par deux animations asynchrones de déplacement, une sur X et une sur Y
+// Le déplacement est réalisé avec les propriété top:/left: et non transform:translateX()/translateY
+// car pas possible de gérer séparément deux transform (un sur Y et un autre sur Y) dans des keyframes différentes. 
+
 
 
 @keyframes loader{
+    //Affichage général du loader avec sont background
     0%{
         opacity:1;
     }
@@ -9,34 +15,138 @@
         opacity:1;
     }
     99%{
-  
         z-index:100;
     }
     100%{
         opacity:0;
         z-index:-100;
     }
-
 }
 
+@keyframes horizontal-move {
+    0% {
+        left:0%;
+    }
+    50% {
+        left:100%;
+    }
+    100% {
+        left:0%;
+    }
+}
+
+@keyframes vertical-move {
+    0% {
+        top:0%;
+    }
+    50% {
+        top:100%;
+    }
+    100% {
+        top:0%;
+    }
+}
+
+@keyframes fade-in {
+    //Permet de masquer le début de l'animation des billes, jusqu'à leur mise en place dans la trajectoire
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
 
 .main-page{
     margin:0;
     z-index:0;
     position:relative;
 
-    &::after{
-        content:"";
-        // background-color: $color-bg;
-        background: linear-gradient(135deg, $color-secondary, $color-primary );
+    .loader{
+        background: linear-gradient(135deg, lighten($color-secondary,10%), lighten($color-primary,10%) );
         position: fixed;
         left:0;
         top:0;
         width:100%;
         height:100%;
         z-index:100;
-        opacity:1;
-        animation: loader 5000ms ease-in-out forwards;
+    
+        animation: loader 3000ms ease-in-out forwards;
+        margin:0;
+        padding:0;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+
+        &__container{
+
+            position:relative;
+            margin:0;
+            padding:0;
+   
+            width:66%;
+            height:15%;
+
+            @include tablet{
+                width:66%;
+                height:20%;
+            }
+            @include desktop{
+                width:35%;
+                height:25%;
+            }
+        }
+
+        &__ball{
+            //taille des balles
+            width:8vw;
+            height:8vw;
+            //recentrer les balles
+            margin-left:-4vw;
+            margin-top:-4vw;
+
+            @include desktop{
+                //taille des balles plus fine
+                width:3vw;
+                height:3vw;
+                //recentrer les balles
+                margin-left:-1.5vw;
+                margin-top:-1.5vw;
+            }
+    
+            position:absolute;
+            background:linear-gradient(180deg, white 50%, rgb(230, 230, 230));
+      
+            border-radius:50%;
+            opacity:0;
+            
+            //Le déplacement vertical est réalisé 2X pour chaque déplacement Horizontal
+            animation: horizontal-move 2s 2, vertical-move 1s 4, fade-in 1s 1 both;
+            animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1), ease-in-out, cubic-bezier(.7,-0.2,.25,.85);
+
+            //Décalage des animations pour chacune des balles
+            &:nth-child(1){
+                animation-delay: 0s, .25s, 0s;
+            }
+            &:nth-child(2){
+                animation-delay:0.2s, 0.45s, 0.2s;
+            }
+            &:nth-child(3){
+                animation-delay:0.4s, 0.65s, 0.4s;
+            }
+            &:nth-child(4){
+                animation-delay:0.6s, 0.85s, 0.6s;
+            }
+            &:nth-child(5){
+                animation-delay:0.8s, 1.05s, 0.8s;
+            }
+            
+        }      
     }
     
 }
+
+
+
+    
+

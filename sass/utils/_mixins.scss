@@ -16,7 +16,6 @@
 
 
 
-
 // Gestion des breakpoints
 
 @mixin mobile-only {
@@ -31,15 +30,22 @@
     }
 }
 
-// Affichage commun : tablettes en mode landscape / PC de petites résolutions
-@mixin pc-little{
-    @media all and (min-width:map-get($breakpoints, tablet-portrait-max)) and (max-width: map-get($breakpoints, pc-large-min)){
+@mixin desktop{
+    @media all and (min-width: map-get($breakpoints, tablet-portrait-max)){
         @content;
     }
 }
 
-@mixin pc-large{
-    @media all and (min-width: map-get($breakpoints, pc-large)){
+
+// Affichage commun : tablettes en mode landscape / PC de petites résolutions
+@mixin desktop-little{
+    @media all and (min-width:map-get($breakpoints, tablet-portrait-max)) and (max-width: map-get($breakpoints, desktop-large-min)){
+        @content;
+    }
+}
+
+@mixin desktop-large{
+    @media all and (min-width: map-get($breakpoints, desktop-large-min)){
         @content;
     }
 }
