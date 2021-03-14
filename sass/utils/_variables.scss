@@ -10,6 +10,7 @@ $color-quaternary:rgb(53, 53, 53);
 
 
 
+
 //couleur du background général
 $color-bg: scale-color($color-quaternary, $lightness: +95%);
 
@@ -28,11 +29,10 @@ $color-font-alternative:$color-quaternary;
 //Taille de police définie dans le html (servant de base aux unités en rem)
 $base-font-size:(
     mobile: medium,
-    tablet: large,
-
-    desktop: x-large,
+    tablet: x-large,
+    desktop-small: x-large,
+    desktop-large: xx-large,
 );
-
 
 
 

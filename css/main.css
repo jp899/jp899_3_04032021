@@ -13,12 +13,17 @@ html {
 }
 @media all and (min-width: 767.99px) and (max-width: 991.99px) {
   html {
-    font-size: large;
+    font-size: x-large;
   }
 }
-@media all and (min-width: 991.99px) {
+@media all and (min-width: 991.99px) and (max-width: 1200px) {
   html {
     font-size: x-large;
+  }
+}
+@media all and (min-width: 1200px) {
+  html {
+    font-size: xx-large;
   }
 }
 

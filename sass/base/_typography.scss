@@ -23,10 +23,12 @@ html{
     @include tablet{
         font-size:map-get($base-font-size, tablet);
     }
-    @include desktop{
-        font-size:map-get($base-font-size, desktop);
+    @include desktop-small{
+        font-size:map-get($base-font-size, desktop-small);
     }
-
+    @include desktop-large{
+        font-size:map-get($base-font-size, desktop-large);
+    }
 
 }
 
