@@ -83,36 +83,30 @@
             position:relative;
             margin:0;
             padding:0;
-   
-            width:66%;
-            height:15%;
+            width:185px;
+            height:75px;
+            margin-top:-75px;
 
+            // Agrandissement de l'animation avec l'augmentation de résolution
             @include tablet{
-                width:66%;
-                height:20%;
+                transform:scale(1.5);
             }
-            @include desktop{
-                width:35%;
-                height:25%;
+            @include desktop-small{
+                transform:scale(2);
             }
+            @include desktop-large{
+                transform:scale(2.5);
+            }
+        
         }
 
         &__ball{
             //taille des balles
-            width:8vw;
-            height:8vw;
+            width:20px;
+            height:20px;
             //recentrer les balles
-            margin-left:-4vw;
-            margin-top:-4vw;
-
-            @include desktop{
-                //taille des balles plus fine
-                width:3vw;
-                height:3vw;
-                //recentrer les balles
-                margin-left:-1.5vw;
-                margin-top:-1.5vw;
-            }
+            margin-left:-10px;
+            margin-top:-10px;
     
             position:absolute;
             background:linear-gradient(180deg, white 50%, rgb(230, 230, 230));

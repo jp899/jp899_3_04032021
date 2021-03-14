@@ -26,7 +26,14 @@ $color-font-alternative:$color-quaternary;
 
 
 //Taille de police définie dans le html (servant de base aux unités en rem)
-$base-font-size:medium;
+$base-font-size:(
+    mobile: medium,
+    tablet: large,
+
+    desktop: x-large,
+);
+
+
 
 
 // Breakpoints pour affichage responsive

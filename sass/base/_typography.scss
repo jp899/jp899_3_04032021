@@ -17,6 +17,16 @@
 
 // Réglage taille police sur root/html pour utilisation des unités rem
 html{
-    font-size:$base-font-size;
+
+    font-size:map-get($base-font-size, mobile);
+
+    @include tablet{
+        font-size:map-get($base-font-size, tablet);
+    }
+    @include desktop{
+        font-size:map-get($base-font-size, desktop);
+    }
+
+
 }
 
