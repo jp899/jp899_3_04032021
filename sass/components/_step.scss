@@ -20,7 +20,12 @@
     @include tablet{
         margin-bottom:30px;
     }
-    @include desktop{
+    @include desktop-small{
+        width:45%;
+        margin-bottom:30px;
+    }
+    @include desktop-large{
+        width:30%;
         margin-bottom:30px;
     }
 

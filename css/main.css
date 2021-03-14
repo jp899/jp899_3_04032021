@@ -16,12 +16,12 @@ html {
     font-size: x-large;
   }
 }
-@media all and (min-width: 991.99px) and (max-width: 1200px) {
+@media all and (min-width: 991.99px) and (max-width: 1400px) {
   html {
     font-size: x-large;
   }
 }
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1400px) {
   html {
     font-size: xx-large;
   }
@@ -102,8 +102,15 @@ a {
     margin-bottom: 30px;
   }
 }
-@media all and (min-width: 991.99px) {
+@media all and (min-width: 991.99px) and (max-width: 1400px) {
   .step {
+    width: 45%;
+    margin-bottom: 30px;
+  }
+}
+@media all and (min-width: 1400px) {
+  .step {
+    width: 30%;
     margin-bottom: 30px;
   }
 }
@@ -127,14 +134,14 @@ a {
     left: -15px;
   }
 }
-@media all and (min-width: 991.99px) and (max-width: 1200px) {
+@media all and (min-width: 991.99px) and (max-width: 1400px) {
   .step__number {
     width: 30px;
     height: 30px;
     left: -15px;
   }
 }
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1400px) {
   .step__number {
     width: 36px;
     height: 36px;
@@ -176,8 +183,17 @@ a {
     margin-bottom: 35px;
   }
 }
-@media all and (min-width: 991.99px) {
+@media all and (min-width: 991.99px) and (max-width: 1400px) {
   .restaurant-card {
+    width: 47.5%;
+    height: 350px;
+    border-radius: 30px;
+    margin-bottom: 40px;
+  }
+}
+@media all and (min-width: 1400px) {
+  .restaurant-card {
+    width: 47%;
     height: 350px;
     border-radius: 30px;
     margin-bottom: 35px;
@@ -258,6 +274,21 @@ a {
   flex-direction: row;
   overflow: hidden;
 }
+@media all and (min-width: 767.99px) and (max-width: 991.99px) {
+  .dish {
+    margin-bottom: 21px;
+  }
+}
+@media all and (min-width: 991.99px) and (max-width: 1400px) {
+  .dish {
+    margin-bottom: 21px;
+  }
+}
+@media all and (min-width: 1400px) {
+  .dish {
+    margin-bottom: 27px;
+  }
+}
 .dish__description {
   flex: 1;
   overflow: hidden;
@@ -270,9 +301,14 @@ a {
     padding-left: 25px;
   }
 }
-@media all and (min-width: 991.99px) {
+@media all and (min-width: 991.99px) and (max-width: 1400px) {
   .dish__description {
-    padding-left: 25px;
+    padding-left: 15px;
+  }
+}
+@media all and (min-width: 1400px) {
+  .dish__description {
+    padding-left: 20px;
   }
 }
 .dish__description h3 {
@@ -282,12 +318,22 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+@media all and (min-width: 991.99px) {
+  .dish__description h3 {
+    font-size: 1rem;
+  }
+}
 .dish__description p {
   margin: 0;
   font-weight: 300;
   font-size: 0.95rem;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+@media all and (min-width: 991.99px) {
+  .dish__description p {
+    font-size: 0.83rem;
+  }
 }
 .dish__price {
   margin-right: 22px;
@@ -423,9 +469,24 @@ footer ul li a {
 }
 @media all and (min-width: 767.99px) and (max-width: 991.99px) {
   .functionning-steps__container {
-    width: 65%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+@media all and (min-width: 991.99px) and (max-width: 1400px) {
+  .functionning-steps__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+@media all and (min-width: 1400px) {
+  .functionning-steps__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 
@@ -434,10 +495,31 @@ footer ul li a {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-.restaurants-list h2, .restaurants-list__container {
+.restaurants-list h2 {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+}
+.restaurants-list__container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media all and (min-width: 991.99px) and (max-width: 1400px) {
+  .restaurants-list__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+@media all and (min-width: 1400px) {
+  .restaurants-list__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .restaurant-introducer {
@@ -479,12 +561,52 @@ footer ul li a {
     transform: translateY(0%);
   }
 }
+.lists-layout {
+  background-color: whitesmoke;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+@media all and (min-width: 767.99px) and (max-width: 991.99px) {
+  .lists-layout {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+}
+@media all and (min-width: 991.99px) and (max-width: 1400px) {
+  .lists-layout {
+    padding-left: 2%;
+    padding-right: 2%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 20px;
+  }
+}
+@media all and (min-width: 1400px) {
+  .lists-layout {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
 .dishes-list {
   padding-top: 15px;
-  background-color: whitesmoke;
+}
+@media all and (min-width: 991.99px) and (max-width: 1400px) {
+  .dishes-list {
+    width: 47%;
+  }
+}
+@media all and (min-width: 1400px) {
+  .dishes-list {
+    width: 30.5%;
+  }
 }
 .dishes-list h2, .dishes-list HR {
-  margin-left: 6%;
+  margin-left: 2%;
 }
 .dishes-list h2 {
   font-size: 1rem;
@@ -493,7 +615,7 @@ footer ul li a {
   margin-bottom: 0;
 }
 .dishes-list HR {
-  width: 11%;
+  width: 13%;
   height: 3px;
   background-color: #99E2D0;
   border: 0;
@@ -501,9 +623,6 @@ footer ul li a {
   margin-bottom: 13px;
 }
 .dishes-list__container {
-  width: 92%;
-  margin-left: auto;
-  margin-right: auto;
   padding-bottom: 1px;
 }
 .dishes-list__container > .dish:nth-child(1) {
@@ -608,12 +727,12 @@ footer ul li a {
     transform: scale(1.5);
   }
 }
-@media all and (min-width: 991.99px) and (max-width: 1200px) {
+@media all and (min-width: 991.99px) and (max-width: 1400px) {
   .main-page .loader__container {
     transform: scale(2);
   }
 }
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1400px) {
   .main-page .loader__container {
     transform: scale(2.5);
   }

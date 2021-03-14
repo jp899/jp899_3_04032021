@@ -10,6 +10,16 @@
     border-radius: 16px;
     margin-bottom:16px;
 
+    @include tablet{
+        margin-bottom: 21px;
+    }
+    @include desktop-small{
+        margin-bottom: 21px;
+    }
+    @include desktop-large{
+        margin-bottom: 27px;
+    }
+
     display:flex;
     flex-direction: row;
   
@@ -27,8 +37,11 @@
         @include tablet{
             padding-left: 25px;
         }
-        @include desktop{
-            padding-left: 25px;
+        @include desktop-small{
+            padding-left: 15px;
+        }
+        @include desktop-large{
+            padding-left: 20px;
         }
 
       
@@ -40,6 +53,9 @@
             //On cache le texte qui dépasse et on met des points de suspension
             overflow: hidden;
             text-overflow: ellipsis; 
+            @include desktop{
+                font-size:1rem;
+            }
         }
         
         p{
@@ -49,6 +65,9 @@
             
             overflow: hidden;
             text-overflow: ellipsis; 
+            @include desktop{
+                font-size:0.83rem;
+            }
         }
 
     }

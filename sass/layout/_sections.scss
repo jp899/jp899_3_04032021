@@ -48,9 +48,21 @@
 
     &__container{
         @include tablet{
-            width:65%;
+            width:70%;
             margin-left:auto;
             margin-right:auto;
+        }
+        @include desktop-small{
+            display:flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        @include desktop-large{
+
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
         }
     }
 }
@@ -62,10 +74,33 @@
     padding-top:30px;
     padding-bottom:30px;
 
-    h2, &__container{
+    h2{
         width:90%;
         margin-left:auto;
         margin-right:auto;
+    }
+
+    &__container{
+        width:90%;
+        margin-left:auto;
+        margin-right:auto;
+
+        @include desktop-small{
+     
+            display:flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        @include desktop-large{
+            display:flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        
+        }
+
+
     }
 }
 
@@ -119,12 +154,52 @@
 }
 
 
+
+.lists-layout{
+
+    background-color:$color-bg;
+    padding-left:4%;
+    padding-right:4%;
+
+
+    @include tablet{
+        padding-left:8%;
+        padding-right:8%;
+       
+    }
+    @include desktop-small{
+        padding-left:2%;
+        padding-right:2%;
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-bottom: 20px;
+        
+    }
+    @include desktop-large{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    
+    }
+}
+
+
+
 .dishes-list{
     padding-top:15px;
-    background-color:$color-bg;
+    @include desktop-small{
+       width:47%;
+    }
+    @include desktop-large{
+        width:30.5%;
+    }
  
+
     h2,HR{
-        margin-left:6%;
+        margin-left:2%;
     }
 
     h2{
@@ -135,7 +210,7 @@
     }
 
     HR{
-        width:11%;
+        width:13%;
         height:3px;
         background-color: $color-tertiary;
         border:0;
@@ -144,9 +219,7 @@
     }
 
     &__container{
-        width:92%;
-        margin-left:auto;
-        margin-right:auto;
+
         padding-bottom:1px;
 
  
