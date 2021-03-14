@@ -17,15 +17,37 @@
     margin-left:12px;
     margin-bottom:22px;
 
+    @include tablet{
+        margin-bottom:30px;
+    }
+    @include desktop{
+        margin-bottom:30px;
+    }
+
     &__number{
         font-size:0.9rem;
         position:absolute;
-        left:-12px;
         color:white;
         background-color: $color-primary;
         border-radius: 50%;
         width:24px;
         height:24px;
+        left:-12px;
+        @include tablet{
+            width:30px;
+            height:30px;
+            left:-15px;
+        }
+        @include desktop-small{
+            width:30px;
+            height:30px;
+            left:-15px;
+        }
+        @include desktop-large{
+            width:36px;
+            height:36px;
+            left:-18px;
+        }
         display:flex;
 
         justify-content: center;

@@ -23,6 +23,14 @@
       
         box-sizing:border-box;
         padding: 11px 13px 11px 13px;
+
+        @include tablet{
+            padding-left: 25px;
+        }
+        @include desktop{
+            padding-left: 25px;
+        }
+
       
         h3{
             margin:0;
@@ -59,6 +67,16 @@
 
     &__tick{
         width:60px;
+        margin-right:-60px;
+
+        @include tablet{
+            width:90px;
+            margin-right:-90px;
+        }
+        @include desktop{
+            width:90px;
+            margin-right:-90px;
+        }
         
         display:flex;
         justify-content: center;
@@ -68,7 +86,6 @@
         color:white;
         font-size:1.3rem;
         
-        margin-right:-60px;
         transition: margin-right 500ms ease-in-out;
     }
 

@@ -97,18 +97,49 @@ a {
   margin-left: 12px;
   margin-bottom: 22px;
 }
+@media all and (min-width: 767.99px) and (max-width: 991.99px) {
+  .step {
+    margin-bottom: 30px;
+  }
+}
+@media all and (min-width: 991.99px) {
+  .step {
+    margin-bottom: 30px;
+  }
+}
 .step__number {
   font-size: 0.9rem;
   position: absolute;
-  left: -12px;
   color: white;
   background-color: #9356DC;
   border-radius: 50%;
   width: 24px;
   height: 24px;
+  left: -12px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media all and (min-width: 767.99px) and (max-width: 991.99px) {
+  .step__number {
+    width: 30px;
+    height: 30px;
+    left: -15px;
+  }
+}
+@media all and (min-width: 991.99px) and (max-width: 1200px) {
+  .step__number {
+    width: 30px;
+    height: 30px;
+    left: -15px;
+  }
+}
+@media all and (min-width: 1200px) {
+  .step__number {
+    width: 36px;
+    height: 36px;
+    left: -18px;
+  }
 }
 .step__icon {
   font-size: 1.1rem;
@@ -130,13 +161,27 @@ a {
 }
 
 .restaurant-card {
-  height: 250px;
   background-color: white;
+  height: 250px;
   border-radius: 22px;
   margin-bottom: 20px;
   display: flex;
   position: relative;
   box-shadow: 0px 6px 12px #dbdbdb;
+}
+@media all and (min-width: 767.99px) and (max-width: 991.99px) {
+  .restaurant-card {
+    height: 350px;
+    border-radius: 30px;
+    margin-bottom: 35px;
+  }
+}
+@media all and (min-width: 991.99px) {
+  .restaurant-card {
+    height: 350px;
+    border-radius: 30px;
+    margin-bottom: 35px;
+  }
 }
 .restaurant-card__icon {
   position: absolute;
@@ -154,15 +199,37 @@ a {
   border-top-left-radius: 22px;
   border-top-right-radius: 22px;
 }
-.restaurant-card a h3 {
+@media all and (min-width: 767.99px) and (max-width: 991.99px) {
+  .restaurant-card a img {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+}
+@media all and (min-width: 991.99px) {
+  .restaurant-card a img {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+}
+.restaurant-card a h3, .restaurant-card a p {
   margin: 0;
-  padding-top: 10px;
   padding-left: 15px;
+}
+@media all and (min-width: 767.99px) and (max-width: 991.99px) {
+  .restaurant-card a h3, .restaurant-card a p {
+    padding-left: 25px;
+  }
+}
+@media all and (min-width: 991.99px) {
+  .restaurant-card a h3, .restaurant-card a p {
+    padding-left: 25px;
+  }
+}
+.restaurant-card a h3 {
+  padding-top: 10px;
   margin-bottom: 5px;
 }
 .restaurant-card a p {
-  margin: 0;
-  padding-left: 15px;
   font-weight: 300;
 }
 .restaurant-card__tag {
@@ -198,6 +265,16 @@ a {
   box-sizing: border-box;
   padding: 11px 13px 11px 13px;
 }
+@media all and (min-width: 767.99px) and (max-width: 991.99px) {
+  .dish__description {
+    padding-left: 25px;
+  }
+}
+@media all and (min-width: 991.99px) {
+  .dish__description {
+    padding-left: 25px;
+  }
+}
 .dish__description h3 {
   margin: 0;
   margin-bottom: 5px;
@@ -224,14 +301,26 @@ a {
 }
 .dish__tick {
   width: 60px;
+  margin-right: -60px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #99E2D0;
   color: white;
   font-size: 1.3rem;
-  margin-right: -60px;
   transition: margin-right 500ms ease-in-out;
+}
+@media all and (min-width: 767.99px) and (max-width: 991.99px) {
+  .dish__tick {
+    width: 90px;
+    margin-right: -90px;
+  }
+}
+@media all and (min-width: 991.99px) {
+  .dish__tick {
+    width: 90px;
+    margin-right: -90px;
+  }
 }
 .dish:hover .dish__tick {
   margin-right: 0;
@@ -331,6 +420,13 @@ footer ul li a {
   margin-right: auto;
   margin-top: 45px;
   margin-bottom: 65px;
+}
+@media all and (min-width: 767.99px) and (max-width: 991.99px) {
+  .functionning-steps__container {
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .restaurants-list {

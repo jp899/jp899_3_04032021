@@ -45,6 +45,14 @@
     margin-right:auto;
     margin-top:45px;
     margin-bottom: 65px;
+
+    &__container{
+        @include tablet{
+            width:65%;
+            margin-left:auto;
+            margin-right:auto;
+        }
+    }
 }
 
 

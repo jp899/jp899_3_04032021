@@ -1,9 +1,22 @@
 
 .restaurant-card{
-    height: 250px;
     background-color: white;
+    
+    height: 250px;
     border-radius: 22px;
     margin-bottom: 20px;
+
+    @include tablet{
+        height: 350px;
+        border-radius: 30px;
+        margin-bottom: 35px;
+    }
+
+    @include desktop{
+        height: 350px;
+        border-radius: 30px;
+        margin-bottom: 35px;
+    }
 
     display:flex;
     position:relative;
@@ -26,18 +39,36 @@
             object-fit:cover;
             border-top-left-radius: 22px;
             border-top-right-radius: 22px;
+            @include tablet{
+                border-top-left-radius: 30px;
+                border-top-right-radius: 30px;
+            }
+            @include desktop{
+                border-top-left-radius: 30px;
+                border-top-right-radius: 30px;
+            }
+
+        }
+
+        h3, p{
+            margin:0;
+            padding-left: 15px;
+
+            @include tablet{
+                padding-left: 25px;
+            }
+            @include desktop{
+                padding-left: 25px;
+            }
+
         }
 
         h3{
-            margin:0;
             padding-top: 10px;
-            padding-left: 15px;
-            margin-bottom:5px;
+            margin-bottom:5px;            
         }
 
         p{
-            margin:0;
-            padding-left: 15px;
             font-weight:300;
         }
     }
