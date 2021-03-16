@@ -7,7 +7,8 @@
     "lib": "lib"
   },
   "scripts": {
-    "sass" : "sass --watch ./sass/main.scss:./css/main.css"
+    "sass" : "sass --watch ./sass/main.scss:./css/main.css",
+    "sass-compressed" : "sass ./sass/main.scss:./css/main.css --style compressed"
   },
   "repository": {
     "type": "git",
