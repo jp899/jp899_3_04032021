@@ -8,7 +8,8 @@
   },
   "scripts": {
     "sass" : "sass --watch ./sass/main.scss:./css/main.css",
-    "sass-compressed" : "sass ./sass/main.scss:./css/main.css --style compressed"
+    "sass-compressed" : "sass ./sass/main.scss:./css/main.css --style compressed",
+    "prefix" : "postcss ./css/main.css --use autoprefixer -d ./css"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,6 @@
   "bugs": {
     "url": "https://github.com/jpnavailles/Jean-PaulNavailles_3_04032021/issues"
   },
-  "homepage": "https://github.com/jpnavailles/Jean-PaulNavailles_3_04032021#readme"
+  "homepage": "https://github.com/jpnavailles/Jean-PaulNavailles_3_04032021#readme",
+  "browserslist":"defaults"
 }
