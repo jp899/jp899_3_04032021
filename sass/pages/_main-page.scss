@@ -58,7 +58,6 @@
 }
 
 .main-page{
-    margin:0;
     z-index:0;
     position:relative;
 
@@ -83,20 +82,21 @@
             position:relative;
             margin:0;
             padding:0;
-            width:185px;
+            width:190px;
             height:75px;
             margin-top:-75px;
 
-            // Agrandissement de l'animation avec l'augmentation de résolution
+            // Agrandissement de l'animation avec l'augmentation de la largeur d'écran
             @include tablet{
-                transform:scale(1.5);
+                transform:scale(1.3);
             }
             @include desktop-small{
-                transform:scale(2);
+                transform:scale(1.3);
             }
-            @include desktop-large{
-                transform:scale(2.5);
-            }
+            // @include desktop-large{
+            //     transform:scale(1.5);
+            // }
+  
         
         }
 

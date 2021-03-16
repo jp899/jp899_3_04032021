@@ -31,7 +31,7 @@ $base-font-size:(
     mobile: medium,
     tablet: x-large,
     desktop-small: x-large,
-    desktop-large: xx-large,
+    desktop-large: x-large,
 );
 
 
@@ -40,5 +40,5 @@ $base-font-size:(
 $breakpoints: (
     mobile-max: 767.99px,
     tablet-portrait-max: 991.99px,
-    desktop-large-min: 1400px
+    desktop-large-min: 1500px
 );

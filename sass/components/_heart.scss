@@ -11,7 +11,7 @@
     cursor:pointer;
 
 
-    //Cible l'icone définie en html (coeur creux)
+    //ce pseudoselecteur cible l'icone définie en html (coeur creux)
     &::before{
         opacity:1;
         transition: opacity 1000ms ease-in-out;
@@ -19,7 +19,8 @@
 
 
     &::after{
-        // Insertion d'un coeur plein (weight=900 pour spécifier le style désiré : Solid)
+        // Insertion d'un coeur plein coloré (weight=900 pour spécifier le style désiré : Solid)
+        // celui-ci est transparent de base et deviens opaque en hover
         font-family:"Font Awesome 5 Free";
         content:"\f004";
         font-weight:900;
@@ -31,8 +32,10 @@
        
         // Appliquer un dégradé de couleur sur le coeur plein inséré
         background: linear-gradient(45deg, $color-secondary, $color-primary );
+        //On applique le background au contenu de l'élément et on rend la couleur de ce contenu transparent 
+        //pour ne voir que le background à travers le contenu de l'élément
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color:transparent;
 
         opacity:0;
         transition: opacity 1000ms ease-in-out;
@@ -48,6 +51,7 @@
         }
 
         &::after{
+            //Le coeur plein coloré deviens opaque 
             opacity:1;
         }
     }

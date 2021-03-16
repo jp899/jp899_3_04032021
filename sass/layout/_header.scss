@@ -10,8 +10,18 @@ header{
     padding-bottom:15px;
 
     .header__logo{
-        width:43%;
         padding-bottom:0;
+        
+        width:43%;
+        @include tablet{
+            width:35%;
+        }
+        @include desktop-small{
+            width:30%;
+        }
+        @include desktop-large{
+            width:25%;
+        }
     }
 
     nav{

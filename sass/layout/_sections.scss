@@ -107,6 +107,13 @@
 
 .restaurant-introducer{
     height:290px;
+
+    @include desktop-small{
+        height:350px;
+    }
+    @include desktop-large{
+        height:420px;
+    }
     position: relative;
 
     img{
@@ -141,7 +148,7 @@
 
 }
 
-
+//Effet d'apparition progressive des différents plats au sein d'une même section
 @keyframes appear{
     0%{
         opacity:0;
@@ -178,6 +185,8 @@
         
     }
     @include desktop-large{
+        padding-left:2%;
+        padding-right:2%;
         display:flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -194,7 +203,7 @@
        width:47%;
     }
     @include desktop-large{
-        width:30.5%;
+        width:32%;
     }
  
 
@@ -222,7 +231,6 @@
 
         padding-bottom:1px;
 
- 
         > .dish{
             @include async-animate(4, appear, 700ms, 200ms, ease-in-out, both );
         }

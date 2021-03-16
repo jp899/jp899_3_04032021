@@ -10,6 +10,7 @@
     @include box-shadow(25%);
 
     &:hover{
+        //Au survol la couleur de background s'éclaircit et l'ombre portée est plus sombre
         background: linear-gradient(175deg, lighten($color-secondary, 5%), lighten($color-primary,5%) );
         @include box-shadow(40%);
     }
