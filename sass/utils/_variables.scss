@@ -39,6 +39,9 @@ $base-font-size:(
 // Breakpoints pour affichage responsive
 $breakpoints: (
     mobile-max: 767.99px,
+    tablet-portrait-min: 768px,
     tablet-portrait-max: 991.99px,
+    desktop-min: 992px,
+    desktop-small-max: 1499.99px,
     desktop-large-min: 1500px
 );

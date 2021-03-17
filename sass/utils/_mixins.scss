@@ -25,13 +25,13 @@
 }
 
 @mixin tablet{
-    @media all and (min-width: map-get($breakpoints, mobile-max)) and (max-width: map-get($breakpoints, tablet-portrait-max)){
+    @media all and (min-width: map-get($breakpoints, tablet-portrait-min)) and (max-width: map-get($breakpoints, tablet-portrait-max)){
         @content;
     }
 }
 
 @mixin desktop{
-    @media all and (min-width: map-get($breakpoints, tablet-portrait-max)){
+    @media all and (min-width: map-get($breakpoints, desktop-min)){
         @content;
     }
 }
@@ -39,7 +39,7 @@
 
 // Affichage commun : tablettes en mode landscape / PC de petites résolutions
 @mixin desktop-small{
-    @media all and (min-width:map-get($breakpoints, tablet-portrait-max)) and (max-width: map-get($breakpoints, desktop-large-min)){
+    @media all and (min-width:map-get($breakpoints, desktop-min)) and (max-width: map-get($breakpoints, desktop-small-max)){
         @content;
     }
 }
